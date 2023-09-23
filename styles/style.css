@@ -1,0 +1,137 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+:root{
+    font-size: 62.5%;
+    --background: rgb(242, 235, 227);
+    --header: rgb(209, 204, 204);
+    --letter: #F2CB05;
+     --text: #3e3e3e;
+    --white: #F6F8FF;
+    --purple: #4d386d;
+    --purple-light: #674394;
+    --silver: #6e6e6e;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0; 
+}
+body{
+    height: 100vh;
+    background: linear-gradient(338deg,var(--purple-light) 35%,var(--purple) 35%,var(--purple) 65%,var(--purple-light) 65%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    background-color: white;
+    display: flex;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 2rem 2rem 0rem;
+}
+.infomacoes{
+    font-size: 2rem;
+}
+.text{
+    text-align: center;
+}
+.butao{
+display: flex;
+flex-direction: row-reverse;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+border: none;
+background-color: #fff;
+cursor: pointer;
+
+}
+.bemvindo{
+    max-width: 30rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+.bemvindo p{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.clique{
+    width: 70%;
+    border: none;
+    background-color: #820e0e;
+    color: #FFF;
+
+    padding: 1rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+input{
+    outline: none;
+    border: none;
+}
+
+.nomes,.emails, .cell, .seeend{
+display: flex;
+gap: 1rem;
+border: 1px solid black;
+padding: 1rem;
+border-radius: 1rem;
+cursor: pointer;
+}
+.user{
+    width: 1.5rem;
+}
+
+.send{
+    width: 1.5rem;
+    
+}
+.hide{
+    display: flex;
+    gap: 6rem;
+    display: none;
+}
+body.active .bemvindo{
+    display: none;
+    }
+body.active .hide{
+    display: flex;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+    padding: 2rem 0rem 2rem 2rem;
+}
+.text p{
+    cursor: pointer;
+    
+}
+.seeend{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
