@@ -17,6 +17,8 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    
+
 
 }
 input[type="number"]::-webkit-inner-spin-button,
@@ -38,6 +40,7 @@ body{
     display: flex;
     padding: 2rem;
     border-radius: 1rem;
+    position: relative;
 }
 .inputs{
     display: flex;
@@ -125,6 +128,9 @@ body.active .hide{
     gap: 2.3rem;
     padding: 2rem 0rem 2rem 2rem;
 }
+li{
+    list-style-type: none;
+}
 .text p{
     cursor: pointer;
     
@@ -134,5 +140,242 @@ body.active .hide{
     align-items: center;
     justify-content: center;
 }
+.error{
+    position: absolute;
+    top: 0;
+    padding: 2rem;
+    background-color: red;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: 300;
+    font-size: 2rem;
+    opacity: 0;
 
+}
+#map { height: 180px; }
+@keyframes show {
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+.hide{
+    margin-top: 5rem;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+    display: none;
+}
+.burguer{
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    top: 4rem;
+    right: 1rem;
+    cursor: pointer;
+    padding: 4rem 4rem 0 4rem;
+    transition: 2s;
+}
+.burguer span:nth-child(1){
+position: absolute;
+width: 3rem;
+top: 0;
+height: 0.2rem;
+background-color: black;
+transition: 2s;
+}
+.burguer span:nth-child(2){
+    position: absolute;
+    top: 0.5rem;
+    width: 3rem;
+    height: 0.2rem;
+    background-color: black;
+    transition: 2s;
+    transition: 2s;
+    }
+.burguer span:nth-child(3){
+        position: absolute;
+        top: 1rem;
+        width: 3rem;
+        height: 0.2rem;
+        background-color: black;
+        transition: 2s;
+        }
+.mobile-menu{
+    height: 0;
+    overflow: hidden;
+    transition: 2s;
+    
 
+}
+.text.active .mobile-menu{
+    transition: 2s;
+    height: 14rem;
+    transition: 2s;
+
+}
+.modal-contato,.modal-infos{
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    box-shadow: -1px 5px 3px 3px rgba(0, 0, 0, 0.29);
+    display: none;
+}
+html.contato .modal-contato{
+    display: flex;
+}
+.modal-infos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+   max-width: 45rem;
+   display: NONE;
+
+}
+
+.pt1,.pt2{
+    width: 50%;
+}
+.pt1{
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    
+}
+.connect{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+html.contato .card{
+    display: none;
+}
+.text-modal{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.coco{
+    width: 12rem;
+    height: 12rem;
+
+}
+.part1{
+    font-size: 2rem;
+
+}
+.nams{
+    position: absolute;
+    bottom: 1rem;
+    left: 7rem;
+}
+.closede, .closedee{
+    width: 2rem;
+}
+.mobile-menu-ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.text.active .burguer span:nth-child(1){
+    transform: rotate(225deg) translateY(-7px);
+    transition: 2s;
+}
+.text.active .burguer span:nth-child(2){
+    transition: 2s;
+   opacity: 0;
+}
+.text.active .burguer span:nth-child(3){
+    transform: rotate(-225deg) translateY(7px);
+    transition: 2s;
+}
+html.endereco .card{
+    display: none;
+}
+html.endereco .modal-endereco{
+    animation: 2s;
+    display: block;
+    bottom: 0rem;
+    top:20rem;
+    
+}
+html.info .modal-infos{
+    display: flex;
+}
+html.info .card{
+    display: none;
+}
+.closed{
+    width: 2rem;
+}
+
+.modal-endereco{
+    animation: 2s;
+    display: none;
+    position: absolute;
+    max-width: 38rem;
+    background-color: white;
+    padding: 2rem;
+    height: 42rem;
+    top: 10rem;
+    
+}
+.close, .closee{
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    cursor: pointer;
+    padding: 3rem;
+}
+body.erro .error{
+   animation: show 1s forwards ease-in-out;
+}
+@keyframes text {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%) scale(0.4);
+
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%) scale(1);
+    }
+}
+
+@keyframes inputs {
+    0%{
+        opacity: 0;
+        transform: translateY(100%) scale(0.4);
+
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%) scale(1);
+    }
+}
+@media screen and (max-width:500px){
+    .hide{
+        flex-direction: column;
+        padding-right: 0;
+        gap: 0;
+    }
+    .inputs{
+        padding-right: 0;
+    }
+    .text{
+        padding: 0;
+    }
+}

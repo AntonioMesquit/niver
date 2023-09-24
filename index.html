@@ -1,50 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tonhao convites</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
     <script type="module" src="src/script.js" defer></script>
+
 </head>
+
 <body>
     <div class="card">
-    <div class="bemvindo">
-        <h1>Olá, voce foi convidado para meu aniversario!</h1>
-        <p>Clique no botao abaixo para preencher os dados!</p>
-        <button class="clique">Clique aqui</button>
+        <div class="bemvindo">
+            <h1>Olá, voce foi convidado para meu aniversario!</h1>
+            <p>Clique no botao abaixo para preencher os dados!</p>
+            <button class="clique">Clique aqui</button>
+        </div>
+        <div class="hide">
+            <div class="infomacoes">
+                <div class="text">
+                    <ul class="menu">
+
+                        <li class="endereco">
+                            <p style="animation: text 1s forwards;">Endereco</p>
+                        </li>
+                        <li>
+                            <p style="animation: text 1.3s forwards;">Telefone</p>
+                        </li>
+                        <li>
+                            <p style="animation: text 1.6s forwards;">Presentes</p>
+                        </li>
+
+                    </ul>
+                    <div class="burguer">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="mobile-menu">
+                        <ul class="mobile-menu-ul">
+                      
+                            <li>
+                                <p style="animation: text 1s forwards;"  class="x">Endereco</p>
+                                
+                            </li>
+                            <li>
+                                <p style="animation: text 1.3s forwards;" class="y">Contato</p>
+                            </li>
+                            <li>
+                                <p style="animation: text 1.6s forwards;" class="z">Informacoes</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                 
+
+                </div>
+            </div>
+            <form action="sucess.html" class="inputs" name="contact" netlify>
+                <div class="nomes" style="animation: inputs 1s forwards;">
+                    <img src="imgs/user-solid.svg" alt="" class="user">
+                    <input type="text" placeholder="Nome" id="nome" name="nome">
+                </div>
+                <div class="emails" style="animation: inputs 1.3s forwards;">
+                    <img src="imgs/envelope-solid.svg" alt="" class="user">
+                    <input type="email" placeholder="Email" id="email" name="email">
+                </div>
+
+                <div class="cell" style="animation: inputs 1.6s forwards;">
+                    <img src="imgs/cell-solid.svg" alt="" class="user">
+                    <input type="number" placeholder="Telefone" id="telefone" name="telefone">
+                </div>
+                <div class="seeend" style="animation: inputs 1.9s forwards;">
+                    <img src="imgs/paper-plane-solid.svg" alt="" class="send">
+                    <button type="submit" class="butao"> Enviar </button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="hide">
-    <div class="infomacoes">
-     <div class="text">
-        <p>Endereco</p>
-        <p>Telefone</p>
-        <p>Presentes</p>
-        <p>Traje</p>
-     </div>
+
+    <div class="modal-endereco">
+        <div id="map">
+            <address style="text-align: center; font-size: 2rem; margin-bottom: 2.5rem;">Maraponga <br>Rua Itália, 1032</address>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.077799438357!2d-38.56751282411658!3d-3.7932288435072574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74e83e1b5575d%3A0x7d41b9b9848f794e!2sR.%20It%C3%A1lia%2C%201032%20-%20Maraponga%2C%20Fortaleza%20-%20CE%2C%2060710-760!5e0!3m2!1spt-BR!2sbr!4v1695502865370!5m2!1spt-BR!2sbr" width="290" height="290" style="border:0;" ></iframe>
+
+            <div class="close">
+                <img src="imgs/x.svg" alt="" class="closed">
+            </div>
+        </div>
+       </div>
+    <div class="modal-contato">
+    <div class="text-modal">
+        <div class="part1">
+         <p>Telefone para contato: <br> 85989382730</p>
+          <p class="nams">Antonio Mesquita</p>
+        </div>
+        <div class="part2">
+         <img src="imgs/logo.png" alt="" class="coco">
+        </div>
     </div>
-   <form action="sucess.html" class="inputs" name="contact" netlify>
-    <div class="nomes">
-    <img src="imgs/user-solid.svg" alt="" class="user">
-    <input type="text" placeholder="Nome" id="nome" name="nome">
+    <div class="closee">
+        <img src="imgs/x.svg" alt="" class="closede">
     </div>
-    <div class="emails">
-        <img src="imgs/envelope-solid.svg" alt="" class="user">
-        <input type="email" placeholder="Email" id="email" name="email">
+
+    </div>
+    <div class="modal-infos">
+        <div class="connect">
+        <div class="pt1">
+       <p>Horario: 19h</p>
+       <p>Não levar pessoas de fora</p>
+       <p>Se confirmar a presenca  e nao puder ir, me avisar antes</p>
+        </div>
+        <div class="pt2">
+        <h1>Presentes</h1>
+        <p>Como vocês não vão ter que gastar nada, presentes obrigatorios. :D</p>
+
+        </div>
+    </div>
+    <div class="closee">
+        <img src="imgs/x.svg" alt="" class="closedee">
+    </div>
     </div>
  
-    <div class="cell">
-        <img src="imgs/cell-solid.svg" alt="" class="user">
-        <input type="number" placeholder="Telefone" id="telefone" name="telefone">>
+
+    <div class="error">
+        <p class="erro-text">Digite todos os campos corretamente!</p>
     </div>
-    <div class="seeend">
-        <img src="imgs/paper-plane-solid.svg" alt="" class="send">
-        <button type="submit" class="butao"> Enviar </button>
-    </div> 
-</form>
-</div>
-    </div>
-    
-    
 </body>
+
 </html>
